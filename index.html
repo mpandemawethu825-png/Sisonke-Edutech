@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sisonke EduTech | Africa's All-in-One Solutions Hub</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <style>
+            :root {
+                --primary-color: #0dcaf0;
+                --secondary-color: #0d6efd;
+                --dark-navy: #273053;
+                --section-bg: #f0f8ff;
+                --white: #ffffff;
+                --text-grey: #717275;
+            }
+
+            body { font-family: 'DM Sans', sans-serif; color: var(--text-grey); line-height: 1.7; overflow-x: hidden; }
+            h1, h2, h3, h4, h5 { color: var(--dark-navy); font-weight: 700; }
+            span { color: var(--primary-color); }
+            
+            /* Sticky Navbar Styling */
+            .navbar { background-color: var(--dark-navy); padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .navbar-brand { font-weight: 700; font-size: 24px; color: var(--white) !important; }
+            .nav-link { color: var(--white) !important; font-weight: 500; margin-left: 20px; transition: 0.3s; }
+            .nav-link.active { color: var(--primary-color) !important; }
+
+            /* Hero Video Header */
+            .hero-section {
+                position: relative;
+                height: 100vh;
+                min-height: 700px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                color: white;
+            }
+
+            .video-background {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -1;
+                transform: translateX(-50%) translateY(-50%);
+                filter: brightness(0.35);
+            }
+
+            .hero-content { z-index: 1; text-align: center; }
+
+            .section-padding { padding: 100px 0; }
+            .bg-light-blue { background-color: var(--section-bg); }
+            
+            /* Service & Feature Cards */
+            .service-card {
+                background: var(--white); border: none; border-radius: 20px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.05); transition: 0.4s; height: 100%;
+                overflow: hidden;
+            }
+            .service-card:hover { transform: translateY(-10px); }
+            .service-image { height: 220px; width: 100%; object-fit: cover; }
+            .service-content { padding: 30px; }
+            .service-card i { font-size: 2rem; color: var(--primary-color); margin-bottom: 15px; display: block; }
+            
+            /* Leadership & Strategy Styling */
+            .leadership-box { border-left: 5px solid var(--primary-color); padding: 20px 25px; background: var(--white); border-radius: 0 15px 15px 0; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+            .strategy-tag { display: inline-block; background: var(--section-bg); color: var(--secondary-color); padding: 5px 15px; border-radius: 50px; font-weight: 700; font-size: 0.8rem; margin-bottom: 10px; }
+            
+            /* Visionary Section */
+            .vision-container { 
+                background: linear-gradient(135deg, var(--dark-navy) 0%, #1a203a 100%); 
+                color: white; padding: 80px 60px; border-radius: 40px; position: relative;
+            }
+
+            .custom-btn { background: var(--primary-color); color: white; border-radius: 100px; padding: 15px 40px; border: none; font-weight: 700; transition: 0.3s; text-decoration: none; cursor: pointer; }
+            .custom-btn:hover { background: var(--secondary-color); color: white; box-shadow: 0 10px 20px rgba(13, 202, 240, 0.3); }
+            
+            footer { background: var(--dark-navy); color: white; padding: 80px 0 40px; }
+        </style>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">SISONKE <span>EDUTECH</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="bi-list text-white fs-2"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_1">Home</a></li>
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">Company</a></li>
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Services</a></li>
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_4">Vision 2045</a></li>
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_5">Strategy</a></li>
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section class="hero-section" id="section_1">
+                <video autoplay muted loop playsinline class="video-background">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-his-laptop-34444-large.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content container">
+                    <h1 class="text-white display-2 mb-3 fw-bold">Building Africa’s Future</h1>
+                    <p class="lead text-white-50 mb-5 fs-3">One learner, one solution, and one community at a time.</p>
+                    <a href="#section_3" class="custom-btn">Our Solutions</a>
+                </div>
+            </section>
+
+            <section class="section-padding" id="section_2">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h2 class="mb-4">"Sisonke" means <span>Together</span></h2>
+                            <p class="lead">Sisonke EduTech is a community-driven enterprise providing integrated education, technology, creative, and retail solutions.</p>
+                            <p>Headquartered in <strong>Ugie, Eastern Cape</strong>, South Africa, the name reflects our long-term commitment to building integrated solutions that uplift individuals, businesses, and communities across Africa.</p>
+                            
+                            <h4 class="mt-5 mb-4">Leadership & Vision</h4>
+                            <div class="leadership-box">
+                                <h5>Nakhane Ndabeni</h5>
+                                <p class="small text-muted mb-0">CEO & Co-Founder | Strategic leadership and continental expansion.</p>
+                            </div>
+                            <div class="leadership-box">
+                                <h5>Mawethu Mpande</h5>
+                                <p class="small text-muted mb-0">COO & CFO & Co-Founder | Operations, finance, and scalable growth.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 shadow-lg" alt="Community Growth">
+                            <div class="p-4 bg-light-blue rounded-3 mt-4">
+                                <h5 class="mb-3">Our Core Values</h5>
+                                <div class="row">
+                                    <div class="col-6"><p class="small mb-1"><i class="bi-check-circle text-primary me-2"></i>Collaboration</p></div>
+                                    <div class="col-6"><p class="small mb-1"><i class="bi-check-circle text-primary me-2"></i>Excellence</p></div>
+                                    <div class="col-6"><p class="small mb-1"><i class="bi-check-circle text-primary me-2"></i>Innovation</p></div>
+                                    <div class="col-6"><p class="small mb-1"><i class="bi-check-circle text-primary me-2"></i>Integrity</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding bg-light-blue" id="section_3">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="mb-3">Integrated <span>Service Divisions</span></h2>
+                        <p>Specialized expertise across education, technology, and lifestyle.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=60" class="service-image" alt="Mathematics Education">
+                                <div class="service-content">
+                                    <i class="bi-calculator"></i>
+                                    <h4>Math Tutoring</h4>
+                                    <p class="small">Grades 4-12. Physical & online sessions focused on curriculum-aligned excellence.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=60" class="service-image" alt="IT Services">
+                                <div class="service-content">
+                                    <i class="bi-laptop"></i>
+                                    <h4>IT Services</h4>
+                                    <p class="small">Computer and laptop repairs, software installation, and hardware upgrades.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=500&q=60" class="service-image" alt="Graphic Design">
+                                <div class="service-content">
+                                    <i class="bi-palette"></i>
+                                    <h4>Digital Design</h4>
+                                    <p class="small">Logo design, brand identity, and professional CV materials for businesses.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-card">
+                                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=500&q=60" class="service-image" alt="Lifestyle Retail">
+                                <div class="service-content">
+                                    <i class="bi-bag-heart"></i>
+                                    <h4>Lifestyle Retail</h4>
+                                    <p class="small">Affordable fashion accessories: Sunglasses, hats, perfumes, and essentials.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding" id="section_4">
+                <div class="container">
+                    <div class="vision-container shadow-lg">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 text-center text-lg-start">
+                                <h2 class="text-white">Long-Term Expansion: <br><span>Sisonke Hypermarket</span></h2>
+                                <p class="text-white-50 mt-3">Over the next 10–20 years, Sisonke will evolve into a continent-wide network of physical and digital hubs.</p>
+                                <div class="mt-4">
+                                    <p class="small text-primary fw-bold mb-1">OUR FUTURE INFRASTRUCTURE</p>
+                                    <ul class="list-unstyled text-white-50 small">
+                                        <li>• Education & Skills Development Centers</li>
+                                        <li>• Technology Sales & Repair Desks</li>
+                                        <li>• Creative Studios for Business Digital Services</li>
+                                        <li>• Retail Spaces for Essential Lifestyle Learning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 text-center">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 mt-4 mt-lg-0" alt="Sisonke Future Hub">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding bg-light-blue" id="section_5">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2>The Sisonke <span>Strategy</span></h2>
+                        <p>A hub-and-ecosystem model where each service strengthens the others.</p>
+                    </div>
+                    [Image of a business ecosystem diagram showing Education, Technology, and Retail synergy]
+                    <div class="row mt-5">
+                        <div class="col-lg-4">
+                            <div class="p-4 bg-white rounded shadow-sm">
+                                <span class="strategy-tag">PHASE 1: TRUST</span>
+                                <h5>Education Hub</h5>
+                                <p class="small">Our specialized Mathematics expertise builds trust within the community and empowers the next generation.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="p-4 bg-white rounded shadow-sm mt-4 mt-lg-0">
+                                <span class="strategy-tag">PHASE 2: EFFICIENCY</span>
+                                <h5>Tech & Creative</h5>
+                                <p class="small">Technology enhances service delivery, while creative services support small businesses and branding.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="p-4 bg-white rounded shadow-sm mt-4 mt-lg-0">
+                                <span class="strategy-tag">PHASE 3: SUSTAINABILITY</span>
+                                <h5>Retail Integration</h5>
+                                <p class="small">Retail ensures financial sustainability and accessibility to lifestyle essentials under one unified brand.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5 p-5 bg-white rounded shadow-sm text-center">
+                        <h4>Competitive Advantage</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+                            <span class="badge bg-info p-2 px-3">Specialized Mathematics expertise</span>
+                            <span class="badge bg-info p-2 px-3">Multi-service convenience</span>
+                            <span class="badge bg-info p-2 px-3">Affordable, community pricing</span>
+                            <span class="badge bg-info p-2 px-3">Scalable hypermarket model</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding" id="section_6">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="text-center mb-5">
+                                <h2>Get in <span>Touch</span></h2>
+                                <p>Sisonke EduTech is building Africa’s future — one learner, one solution, and one community at a time.</p>
+                            </div>
+                            <form class="p-5 bg-white rounded shadow-lg">
+                                <div class="row g-4">
+                                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Full Name" required></div>
+                                    <div class="col-md-6"><input type="email" class="form-control" placeholder="Email Address" required></div>
+                                    <div class="col-12"><textarea class="form-control" rows="5" placeholder="How can Sisonke help you or your business?" required></textarea></div>
+                                    <div class="col-12 text-center mt-4"><button type="submit" class="custom-btn w-100">Send Message</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-white text-center">
+            <div class="container">
+                <h4 class="text-white mb-2">SISONKE EDUTECH</h4>
+                <p class="text-white-50">Private Multi-Service Enterprise</p>
+                <div class="my-4">
+                    <p class="small mb-1">Headquarters: Ugie, Eastern Cape, 5470, South Africa</p>
+                    <p class="small text-white-50">Serving the Pan-African Markets</p>
+                </div>
+                <hr class="border-secondary mb-4">
+                <p class="small text-white-50 mb-0">Copyright © 2026 Sisonke EduTech. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                // Sisonke Click-Scroll Logic (Integrated from click-scroll.js)
+                var sectionArray = [1, 2, 3, 4, 5, 6];
+
+                $.each(sectionArray, function(index, value){
+                    $(document).scroll(function(){
+                        var offsetSection = $('#section_' + value).offset().top - 84;
+                        var docScroll = $(document).scrollTop();
+                        if ( docScroll >= offsetSection ){
+                            $('.navbar-nav .nav-link').removeClass('active');
+                            $('.navbar-nav .nav-link
