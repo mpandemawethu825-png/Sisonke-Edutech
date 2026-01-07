@@ -2,102 +2,133 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sisonke EduTech | Integrated Pan-African Solutions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>Sisonke EduTech | Premium Africa Hub</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
         <style>
             :root {
-                --primary-color: #0dcaf0;
-                --secondary-color: #0d6efd;
-                --dark-navy: #273053;
-                --section-bg: #f0f8ff;
-                --white: #ffffff;
-                --text-grey: #717275;
+                --primary: #0dcaf0;
+                --secondary: #0d6efd;
+                --dark: #06090f;
+                --glass: rgba(255, 255, 255, 0.05);
+                --glass-border: rgba(255, 255, 255, 0.12);
+                --glossy-gradient: linear-gradient(135deg, #0dcaf0 0%, #0d6efd 100%);
             }
 
-            /* GLOBAL RESET: This kills the white space at the top */
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
-            body { font-family: 'DM Sans', sans-serif; color: var(--text-grey); line-height: 1.7; overflow-x: hidden; }
-            
-            /* Navbar Logic */
+            /* GLOBAL RESET & ALIGNMENT FIX */
+            * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+            html, body { width: 100%; margin: 0; padding: 0; }
+            body { 
+                font-family: 'Plus Jakarta Sans', sans-serif; 
+                background-color: var(--dark); 
+                color: #ffffff;
+                overflow-x: hidden;
+            }
+
+            /* NAVIGATION - FROSTED GLASS */
             .navbar { 
-                background-color: var(--dark-navy); 
-                padding: 15px 0; 
-                position: sticky; 
-                top: 0; 
-                z-index: 1000; 
-                border-bottom: 1px solid rgba(255,255,255,0.1); 
+                background: rgba(6, 9, 15, 0.92);
+                backdrop-filter: blur(20px);
+                padding: 15px 0;
+                border-bottom: 1px solid var(--glass-border);
             }
-            .navbar-brand { font-weight: 700; font-size: 24px; color: var(--white) !important; }
-            .navbar-brand span { color: var(--primary-color); }
-            .nav-link { color: var(--white) !important; font-weight: 500; margin-left: 20px; }
-            .nav-link.active { color: var(--primary-color) !important; }
+            .navbar-brand { font-weight: 800; font-size: 1.5rem; color: white !important; }
+            .navbar-brand span { color: var(--primary); text-shadow: 0 0 10px rgba(13, 202, 240, 0.3); }
 
-            /* Hero Section with Integrated Image */
+            /* HERO - SEAMLESS TOP */
             .hero-section {
-                position: relative;
-                height: 85vh; /* Adjusted for better visibility */
+                height: 85vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: white;
-                background: linear-gradient(rgba(39, 48, 83, 0.75), rgba(39, 48, 83, 0.75)), 
+                text-align: center;
+                padding: 0 20px;
+                background: linear-gradient(rgba(6, 9, 15, 0.7), rgba(6, 9, 15, 0.7)), 
                             url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1500&q=80');
                 background-size: cover;
                 background-position: center;
-                margin-top: 0; /* Ensures no gap under navbar */
+                margin-top: 0;
             }
 
-            .section-padding { padding: 80px 0; }
-            .bg-light-blue { background-color: var(--section-bg); }
-            
-            /* Carousel Styling */
-            .carousel-item { height: 500px; }
-            .carousel-item img { object-fit: cover; height: 100%; filter: brightness(0.5); }
-            .carousel-caption { 
-                background: rgba(39, 48, 83, 0.8); 
-                padding: 30px; border-radius: 15px; 
-                backdrop-filter: blur(10px);
-                bottom: 20%;
+            /* MOBILE-FIRST SERVICE SLIDER */
+            .carousel-item { padding-bottom: 60px; }
+            .carousel-item img { 
+                height: 320px; 
+                object-fit: cover; 
+                border-radius: 30px; 
+                width: 92% !important; 
+                margin: 0 auto;
+                display: block;
+                filter: brightness(0.75) contrast(1.1);
             }
-            
-            .leadership-box { 
-                border-left: 5px solid var(--primary-color); 
-                padding: 15px 25px; background: var(--white); 
-                border-radius: 0 15px 15px 0; margin-bottom: 20px; 
-                box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+
+            /* GLOSSY SERVICE PILLS */
+            .service-pill {
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(18px);
+                border: 1px solid var(--glass-border);
+                border-radius: 28px;
+                padding: 28px;
+                width: 86%;
+                margin: -45px auto 0;
+                position: relative;
+                z-index: 10;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+                text-align: center;
             }
-            
-            .custom-btn { 
-                background: var(--primary-color); color: white; border-radius: 100px; 
-                padding: 14px 35px; border: none; font-weight: 700; 
-                text-decoration: none; transition: 0.3s; display: inline-block;
+
+            .custom-btn {
+                background: var(--glossy-gradient);
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 16px 40px;
+                font-weight: 700;
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin: 0 auto;
+                transition: 0.3s;
+                text-decoration: none;
+                box-shadow: 0 8px 15px rgba(13, 202, 240, 0.2);
             }
-            .custom-btn:hover { background: var(--secondary-color); color: white; transform: translateY(-3px); }
-            
-            footer { background: var(--dark-navy); color: white; padding: 40px 0; }
+
+            .custom-btn:hover {
+                transform: scale(1.03);
+                box-shadow: 0 12px 25px rgba(13, 202, 240, 0.4);
+                color: white;
+            }
+
+            /* RESPONSIVE ALIGNMENT */
+            @media (min-width: 992px) {
+                .carousel-item img { height: 580px; width: 100% !important; }
+                .service-pill { width: 55%; margin-top: -110px; padding: 45px; text-align: left; }
+                .custom-btn { width: auto; margin: 0; }
+                .pill-content-wrapper { display: flex; align-items: center; justify-content: space-between; }
+            }
+
+            .section-title { font-size: 2.8rem; font-weight: 800; text-align: center; margin-bottom: 60px; }
+            .section-title span { color: var(--primary); }
         </style>
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container px-3">
                 <a class="navbar-brand" href="#">SISONKE <span>EDUTECH</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="bi-list text-white fs-2"></span>
+                    <i class="bi-grid-3x3-gap-fill text-white fs-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto pt-3 pt-lg-0 text-center">
                         <li class="nav-item"><a class="nav-link click-scroll" href="#section_1">Home</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">Profile</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Services</a></li>
+                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">Services</a></li>
                         <li class="nav-item"><a class="nav-link click-scroll" href="#section_4">Vision</a></li>
-                        <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
+                        <li class="nav-item mt-3 mt-lg-0"><a href="#section_6" class="custom-btn py-2 px-4 fs-6">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -105,133 +136,128 @@
 
         <main>
             <section class="hero-section" id="section_1">
-                <div class="container text-center">
-                    <h1 class="text-white display-3 fw-bold mb-3">Sisonke EduTech</h1>
-                    <p class="lead text-white-50 mb-5 fs-3">Empowering Africa through Integrated Education & Technology.</p>
-                    <a href="#section_3" class="custom-btn">Explore Our Solutions</a>
+                <div class="container">
+                    <h1 class="display-2 fw-bold mb-4">Africa's Future, <br><span>Built Together.</span></h1>
+                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 650px;">A community-driven hub integrating Mathematics, Technology, Creative Design, and Lifestyle Retail.</p>
+                    <a href="#section_2" class="custom-btn">Discover Solutions</a>
                 </div>
             </section>
 
-            <section class="section-padding" id="section_2">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h2 class="mb-4">Our Mission: <span>Together</span></h2>
-                            <p>Headquartered in <strong>Ugie, Eastern Cape</strong>, Sisonke EduTech operates a hub-and-ecosystem model where each service supports and strengthens the others.</p>
-                            
-                            <div class="mt-4">
-                                <div class="leadership-box">
-                                    <h5>Nakhane Ndabeni</h5>
-                                    <p class="small text-muted mb-0">CEO & Co-Founder | Strategic Vision</p>
-                                </div>
-                                <div class="leadership-box">
-                                    <h5>Mawethu Mpande</h5>
-                                    <p class="small text-muted mb-0">COO & CFO | Operations & Finance</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow" alt="Sisonke Impact">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-padding bg-light-blue" id="section_3">
-                <div class="container">
-                    <div class="text-center mb-5">
-                        <h2>Our <span>Service Ecosystem</span></h2>
-                        <p>Specialized solutions designed for community empowerment.</p>
-                    </div>
-
-                    <div id="serviceSlider" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+            <section class="py-5 bg-black" id="section_2">
+                <div class="container px-0">
+                    <h2 class="section-title">Premium <span>Divisions</span></h2>
+                    
+                    <div id="serviceSlider" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                         <div class="carousel-inner">
+                            
                             <div class="carousel-item active">
-                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Education">
-                                <div class="carousel-caption">
-                                    <h3>Math Tutoring</h3>
-                                    <p>Grades 4-12 physical and online curriculum-aligned excellence.</p>
+                                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80" alt="Mathematics">
+                                <div class="service-pill">
+                                    <div class="pill-content-wrapper">
+                                        <div>
+                                            <h4 class="fw-bold mb-2 text-info"><i class="bi-calculator-fill me-2"></i> Math Tutoring</h4>
+                                            <p class="small text-white-50 mb-0">Curriculum-aligned Grades 4-12. Physical & Online.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Tech">
-                                <div class="carousel-caption">
-                                    <h3>IT Services</h3>
-                                    <p>Hardware upgrades, software installation, and computer repairs.</p>
+                                <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=1200&q=80" alt="IT Repairs">
+                                <div class="service-pill">
+                                    <div class="pill-content-wrapper">
+                                        <div>
+                                            <h4 class="fw-bold mb-2 text-info"><i class="bi-pc-display me-2"></i> IT & Repairs</h4>
+                                            <p class="small text-white-50 mb-0">Computer repairs, software install, and hardware upgrades.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Design">
-                                <div class="carousel-caption">
-                                    <h3>Creative Digital</h3>
-                                    <p>Professional logo design, brand identity, and CV design services.</p>
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=80" alt="Graphic Design">
+                                <div class="service-pill">
+                                    <div class="pill-content-wrapper">
+                                        <div>
+                                            <h4 class="fw-bold mb-2 text-info"><i class="bi-palette-fill me-2"></i> Graphic Design</h4>
+                                            <p class="small text-white-50 mb-0">Logos, brand identity, social graphics, and professional CVs.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80" alt="Retail">
+                                <div class="service-pill">
+                                    <div class="pill-content-wrapper">
+                                        <div>
+                                            <h4 class="fw-bold mb-2 text-info"><i class="bi-bag-check-fill me-2"></i> Lifestyle Retail</h4>
+                                            <p class="small text-white-50 mb-0">Luxury perfumes, sunglasses, hats, and fashion accessories.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#serviceSlider" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#serviceSlider" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
+                        
+                        <div class="d-flex justify-content-center gap-4 mt-4">
+                            <button class="btn btn-outline-info rounded-circle p-2" type="button" data-bs-target="#serviceSlider" data-bs-slide="prev">
+                                <i class="bi-chevron-left"></i>
+                            </button>
+                            <button class="btn btn-outline-info rounded-circle p-2" type="button" data-bs-target="#serviceSlider" data-bs-slide="next">
+                                <i class="bi-chevron-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section-padding" id="section_4">
-                <div class="container text-center">
-                    <div class="p-5 bg-dark text-white rounded-4 shadow">
-                        <h2 class="text-white mb-4">Sisonke Hypermarket Vision 2045</h2>
-                        <p class="lead">Building a continent-wide network of physical and digital hubs integration education, tech repair, and lifestyle retail.</p>
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" class="img-fluid rounded-4 mt-4" style="max-height: 400px; width: 100%; object-fit: cover;" alt="Future Hub">
+            <section class="py-5" id="section_4">
+                <div class="container px-4 text-center">
+                    <div class="py-5 px-3 rounded-4 bg-dark border border-secondary shadow-lg">
+                        <h2 class="fw-bold mb-4">Vision <span>2045</span></h2>
+                        <p class="text-white-50 small mb-5">Sisonke Hypermarket: A Pan-African network of physical and digital hubs integration solutions.</p>
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4" alt="Future">
                     </div>
                 </div>
             </section>
 
-            <section class="section-padding" id="section_6">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="text-center mb-5">
-                                <h2>Get in <span>Touch</span></h2>
-                            </div>
-                            <form class="p-4 bg-white shadow rounded">
-                                <div class="row g-3">
-                                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Name"></div>
-                                    <div class="col-md-6"><input type="email" class="form-control" placeholder="Email"></div>
-                                    <div class="col-12"><textarea class="form-control" rows="5" placeholder="How can Sisonke help you?"></textarea></div>
-                                    <div class="col-12 text-center mt-4"><button class="custom-btn">Send Message</button></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+            <section class="py-5" id="section_6">
+                <div class="container px-4">
+                    <h2 class="section-title">Initiate <span>Growth</span></h2>
+                    <form class="row g-3">
+                        <div class="col-12"><input type="text" class="form-control bg-transparent border-secondary text-white p-3 rounded-3" placeholder="Full Name"></div>
+                        <div class="col-12"><input type="email" class="form-control bg-transparent border-secondary text-white p-3 rounded-3" placeholder="Email Address"></div>
+                        <div class="col-12"><textarea class="form-control bg-transparent border-secondary text-white p-3 rounded-3" rows="4" placeholder="How can Sisonke help you?"></textarea></div>
+                        <div class="col-12 mt-4"><button class="custom-btn">Send Message</button></div>
+                    </form>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <div class="container text-center">
-                <p class="mb-0">© 2026 Sisonke EduTech. Ugie, Eastern Cape, South Africa. Building Africa's Future Together.</p>
-            </div>
+        <footer class="py-5 border-top border-secondary text-center text-white-50 small">
+            <p class="mb-2 fw-bold text-white">SISONKE EDUTECH</p>
+            <p class="mb-0">Ugie, Eastern Cape. Together, We Build Africa.</p>
         </footer>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script>
             $(document).ready(function() {
-                var sectionArray = [1, 2, 3, 4, 6];
+                var sectionArray = [1, 2, 4, 6];
                 $.each(sectionArray, function(index, value){
                     $(document).scroll(function(){
-                        var offsetSection = $('#section_' + value).offset().top - 84;
+                        var offsetSection = $('#section_' + value).offset().top - 90;
                         if ($(document).scrollTop() >= offsetSection){
                             $('.navbar-nav .nav-link').removeClass('active');
                             $('.navbar-nav .nav-link').eq(index).addClass('active');
                         }
                     });
                     $('.click-scroll').eq(index).click(function(e){
-                        var offsetClick = $('#section_' + value).offset().top - 84;
+                        var offsetClick = $('#section_' + value).offset().top - 90;
                         e.preventDefault();
                         $('html, body').animate({ 'scrollTop': offsetClick }, 300);
+                        $(".navbar-collapse").collapse('hide');
                     });
                 });
             });
